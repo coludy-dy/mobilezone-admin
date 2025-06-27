@@ -1,299 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Products</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings | Mobile Zone</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    <header>
-    <div class="navbar section-content">
-        <a href="index.html" class="nav-logo">
-            <h2 class="logo-text"><i class="fa-solid fa-mobile-retro"></i>Mobile Zone</h2>
-        </a>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="product.html" class="nav-link">Products</a>
-            </li>
-            <li class="nav-item">
-                <a href="about.html" class="nav-link">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a href="contact.html" class="nav-link">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a href="#"><i class="fas fa-shopping-cart"></i>Cart</a>
-            </li>
-        </ul>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <h2 class="brand"><i class="fa-solid fa-mobile-retro" style="margin-right: 8px;"></i>Mobile Zone</h2>
+      <ul class="sidebar-menu">
+        <li><a href="index.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="products.html" class="active"><i class="fas fa-box"></i> Products</a></li>
+        <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+        <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="admin-header">
+        <h1>Settings</h1>
+        <div class="profile">
+          <i class="fas fa-user-circle"></i> Admin User
+        </div>
+      </header>
+ <!---- Product filtering----->
+      <section class="settings">
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label for="filter-name">Item Name</label>
+                <input type="text" id="filter-name" placeholder="Search by name">
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-price">Price</label>
+                <input type="number" id="filter-price" placeholder="Search by price">
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-battery">Battery</label>
+                <input type="text" id="filter-battery" placeholder="e.g. 5000mAh">
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-storage">storage</label>
+                <input type="text" id="filter-storage" placeholder="e.g.256GB/512Gb">
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn-filter" onclick="searchFilter()">Search</button>
+                <button class="btn-clear" onclick="clearFilter()">Clear</button>
+            </div>
+        </div>
+      </section>
+       <!-----Product Creating Button------>
+        <div class="create-product-btn-wrapper">
+            <button class="add-btn" onclick="window.location.href='create-products.html'">Create Products<i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+
+      <!-----Product Database------>
+      <div class="product-table-container">
+            <table class="product-table">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Storage</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>IPhone 16 Pro</td>
+                    <td>25</td>
+                    <td>$999</td>
+                    <td>128GB</td>
+                    <td class="actions">
+                    <button class="action-btn view"  onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>2</td>
+                    <td>Vivo S30</td>
+                    <td>20</td>
+                    <td>$989</td>
+                    <td>256GB</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>3</td>
+                    <td>Samsung 14 Ultra</td>
+                    <td>38</td>
+                    <td>$999</td>
+                    <td>512GB</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>4</td>
+                    <td>Xiamoi 14T </td>
+                    <td>40</td>
+                    <td>$744</td>
+                    <td>128GB</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>5</td>
+                    <td>Oppo</td>
+                    <td>25</td>
+                    <td>$655</td>
+                    <td>256GB</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+  </div>
+  <!---------when click the view button------->
+    <div id="viewModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Product Details</h2>
+        <p><strong>Item Name:</strong> iPhone 16 Pro</p>
+        <p><strong>Quantity:</strong> 25</p>
+        <p><strong>Price:</strong> $999</p>
+        <p><strong>Battery:</strong> 5000mAh</p>
+        <p><strong>Camera:</strong> 50MP Dual</p>
+        <!-- Add more details as needed -->
+      </div>
     </div>
-   </header>
-   <!------------------Production Section Starts----------------->
-<!-------IPhone 16--------->
 
-<section id="products">
-    <section class="product">
-        <div class="section-content">
-        <h2 class="section-title"><i class="fas fa-box-open"></i> Our Products</h2>
-        </div>
-        <div class="contain flex">
-            <div class="left">
-                <div class="main-image">
-                    <img src="img/image1.png" alt="" style="width: 500px; height: 500px;">
-                </div>
-                <div class="option flex">
-                    <img src="img/image1.png" onclick="img(this)">
-                    <img src="img/black.png"  onclick="img(this)">
-                    <img src="img/white.png"  onclick="img(this)">
-                    <img src="img/pink.png"   onclick="img(this)">
-                    <img src="img/green.png"  onclick="img(this)">
-                    <img src="img/blue.png"   onclick="img(this)">
-                </div>
-            </div>
-            <div class="right">
-                <h3>IPhone 16 Pro Series</h3>
-                <h3><span class="price" data-base="iphone">4,130,000</span><small>MMK</small></h3>
-                <table class="spec-table">
-                    <tr>
-                        <th>Feature</th>
-                        <th>Specification</th>
-                    </tr>
-                    <tr>
-                        <td>Camera</td>
-                        <td>48MP Main, 12MP Ultra-Wide, 12MP Telephoto with 5x Optical Zoom </td>
-                    </tr>
-                    <tr>
-                        <td>Display Size</td>
-                        <td>6.3" Super Retina XDR</td>
-                    </tr>
-                    <tr>
-                        <td>Battery</td>
-                        <td>3700mAh</td>
-                    </tr>
-                    <tr>
-                        <td>Memory</td>
-                        <td>8GB RAM</td>
-                    </tr>
-                </table>
-                <h5>Storage Options</h5>
-                <div class="capacity-options">
-                    <label><input type="radio" name="capacity1" value="128GB" checked data-price="4,130,000" onchange="updatePrice(this)"> 128GB</label>
-                    <label><input type="radio" name="capacity1" value="256GB" data-price="4,630,000" onchange="updatePrice(this)"> 256GB</label>
-                    <label><input type="radio" name="capacity1" value="512GB"data-price="5,670,000" onchange="updatePrice(this)"> 512GB</label>
-                </div>
-                <h5>Number</h5>
-                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
-                <button>Add To Cart</button>
-            </div>
-        </div>
-    </section>
+  <!---------Java Script------->
+        <script>
+  function searchFilter() {
+    alert("Search triggered. (Implement logic here.)");
+  }
 
-    <!-- Vivo Section -->
-
-    <section class="product">
-        <div class="contain flex">
-            <div class="left">
-                <div class="main-image">
-                    <img src="img/vivomain.png" alt="" style="width: 500px; height: 500px;">
-                </div>
-                <div class="option flex">
-                    <img src="img/vivomain.png" onclick="img(this)">
-                    <img src="img/vivoblack.png" onclick="img(this)">
-                    <img src="img/vivoyellow.png" onclick="img(this)">
-                    <img src="img/vivopink.png" onclick="img(this)">
-                    <img src="img/vivoblue.png" onclick="img(this)">
-                </div>
-            </div>
-            <div class="right">
-                <h3>Vivo S30 Pro Mini Series</h3>
-                <h3><span class="price" data-base="vivo">817,050</span><small>MMK</small></h3>
-                <table class="spec-table">
-                    <tr>
-                        <th>Feature</th>
-                        <th>Specification</th>
-                    </tr>
-                    <tr>
-                        <td>Camera</td>
-                        <td>Dual: 50MP+ 8MP (ultra-wide)</td>
-                    </tr>
-                    <tr>
-                        <td>Display Size</td>
-                        <td>6.78" AMOLED, 120Hz refresh rate, FHD+ resolution</td>
-                    </tr>
-                    <tr>
-                        <td>Battery</td>
-                        <td>5000mAh</td>
-                    </tr>
-                    <tr>
-                        <td>Storage</td>
-                        <td>128GB / 256GB / 512GB</td>
-                    </tr>
-                    <tr>
-                        <td>Memory</td>
-                        <td>8GB RAM</td>
-                    </tr>
-                </table>
-                <h5>Capacity</h5>
-                <div class="capacity-options">
-                    <label><input type="radio" name="capacity2" value="256GB"  checked data-price="817,050" onchange="updatePrice(this)"> 256GB</label>
-                    <label><input type="radio" name="capacity2" value="512GB" data-price="921,800" onchange="updatePrice(this)"> 512GB</label>
-                    <label><input type="radio" name="capacity2" value="1TB" data-price="1,085,500" onchange="updatePrice(this)"> 1TB</label>
-                </div>
-                <h5>Number</h5>
-                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
-                <button>Add To Cart</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Samsung Section -->
-
-    <section class="product">
-        <div class="contain flex">
-            <div class="left">
-                <div class="main-image">
-                    <img src="img/s24.png" alt="" style="width: 500px; height: 500px;">
-                </div>
-                <div class="option flex">
-                    <img src="img/s24.png" onclick="img(this)">
-                    <img src="img/sgray.png" onclick="img(this)">
-                    <img src="img/ssilver.png" onclick="img(this)">
-                    <img src="img/sblue.png" onclick="img(this)">
-                    <img src="img/sorange.png" onclick="img(this)">
-                </div>
-            </div>
-            <div class="right">
-                <h3>SAMSUNG S24 Ultra Series</h3>
-                <h3><span class="price" data-base="samsung">6,180,000</span><small>MMK</small></h3>
-                <table class="spec-table">
-                    <tr>
-                        <th>Feature</th>
-                        <th>Specification</th>
-                    </tr>
-                    <tr>
-                        <td>Camera</td>
-                        <td>200MP main+12MP,50MP 5x</td>
-                    </tr>
-                    <tr>
-                        <td>Display Size</td>
-                        <td>6.8" QHD+Dynamic quality<td>
-                    </tr>
-                    <tr>
-                        <td>Battery</td>
-                        <td>5000mAh</td>
-                    </tr>
-                    <tr>
-                        <td>Storage</td>
-                        <td>128GB / 256GB / 512GB</td>
-                    </tr>
-                    <tr>
-                        <td>Memory</td>
-                        <td>8GB RAM</td>
-                    </tr>
-                </table>
-                <h5>Capacity</h5>
-                <div class="capacity-options">
-                    <label><input type="radio" name="capacity3" value="128GB" checked data-price="4,130,000" onchange="updatePrice(this)"> 128GB</label>
-                    <label><input type="radio" name="capacity3" value="256GB" checked data-price="6,180,000" onchange="updatePrice(this)"> 256GB</label>
-                    <label><input type="radio" name="capacity3" value="512GB" data-price="7,189,000" onchange="updatePrice(this)"> 512GB</label>
-                </div>
-                <h5>Number</h5>
-                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
-                <button>Add To Cart</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Xiaomi Section -->
-
-    <section class="product">
-        <div class="contain flex">
-            <div class="left">
-                <div class="main-image">
-                    <img src="img/xmain.png" alt="" style="width: 500px; height: 500px;">
-                </div>
-                <div class="option flex">
-                    <img src="img/xmain.png" onclick="img(this)">
-                    <img src="img/xblack.png" onclick="img(this)">
-                    <img src="img/xgray.png" onclick="img(this)">
-                    <img src="img/xyellow.png" onclick="img(this)">
-                    <img src="img/xblue.png" onclick="img(this)">
-                </div>
-            </div>
-            <div class="right">
-                <h3>Xiaomi 14T Pro Series</h3>
-                <h3><span class="price" data-base="xiaomi">2,690,000</span><small>MMK</small></h3>
-                <table class="spec-table">
-                    <tr>
-                        <th>Feature</th>
-                        <th>Specification</th>
-                    </tr>
-                    <tr>
-                        <td>Camera</td>
-                        <td>50MP main + 50MP ultra-wide</td>
-                    </tr>
-                    <tr>
-                        <td>Display Size</td>
-                        <td>6.67" AMOLED, 1.5K resolution</td>
-                    </tr>
-                    <tr>
-                        <td>Battery</td>
-                        <td>5000mAh</td>
-                    </tr>
-                    <tr>
-                        <td>Storage</td>
-                        <td>128GB / 256GB / 512GB</td>
-                    </tr>
-                    <tr>
-                        <td>Memory</td>
-                        <td>12GB RAM</td>
-                    </tr>
-                </table>
-                <h5>Capacity</h5>
-                <div class="capacity-options">
-                    <label><input type="radio" name="capacity4" value="128GB" checked data-price="4,130,000" onchange="updatePrice(this)"> 128GB</label>
-                    <label><input type="radio" name="capacity4" value="128GB" checked data-price="2,690,000" onchange="updatePrice(this)">256GB</label>
-                    <label><input type="radio" name="capacity4" value="256GB" data-price="2,890,000" onchange="updatePrice(this)"> 512GB</label>
-                </div>
-                <h5>Number</h5>
-                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
-                <button>Add To Cart</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- JavaScript -->
-
-    <script>
-        function img(clickedImg) {
-            const section = clickedImg.closest('.product');
-            const mainImg = section.querySelector('.main-image img');
-            mainImg.src = clickedImg.src;
-        }
-
-        function change(color) {
-            const line = document.querySelector('.home');
-            if (line) {
-                line.style.background = color;
-            }
-        }
-    </script>
-    <script>
-        function updatePrice(input) {
-            const section = input.closest('.product');
-            const priceDisplay = section.querySelector('.price');
-            const newPrice = input.dataset.price;
-
-            if (priceDisplay && newPrice) {
-                priceDisplay.textContent = newPrice;
-            }
-}
+  function clearFilter() {
+    document.getElementById('filter-name').value = '';
+    document.getElementById('filter-price').value = '';
+    document.getElementById('filter-battery').value = '';
+    document.getElementById('filter-storage').value = '';
+  }
 </script>
+<script>
+  function openModal() {
+    document.getElementById("viewModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("viewModal").style.display = "none";
+  }
+
+  // Optional: close on outside click
+  window.onclick = function(event) {
+    const modal = document.getElementById("viewModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
 
 </body>
 </html>
