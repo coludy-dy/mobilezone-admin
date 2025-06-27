@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Products</title>
+</head>
+<body>
+    <header>
+    <div class="navbar section-content">
+        <a href="index.html" class="nav-logo">
+            <h2 class="logo-text"><i class="fa-solid fa-mobile-retro"></i>Mobile Zone</h2>
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="product.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><i class="fas fa-shopping-cart"></i>Cart</a>
+            </li>
+        </ul>
+    </div>
+   </header>
+   <!------------------Production Section Starts----------------->
+<!-------IPhone 16--------->
+
+<section id="products">
+    <section class="product">
+        <div class="section-content">
+        <h2 class="section-title"><i class="fas fa-box-open"></i> Our Products</h2>
+        </div>
+        <div class="contain flex">
+            <div class="left">
+                <div class="main-image">
+                    <img src="img/image1.png" alt="" style="width: 500px; height: 500px;">
+                </div>
+                <div class="option flex">
+                    <img src="img/image1.png" onclick="img(this)">
+                    <img src="img/black.png"  onclick="img(this)">
+                    <img src="img/white.png"  onclick="img(this)">
+                    <img src="img/pink.png"   onclick="img(this)">
+                    <img src="img/green.png"  onclick="img(this)">
+                    <img src="img/blue.png"   onclick="img(this)">
+                </div>
+            </div>
+            <div class="right">
+                <h3>IPhone 16 Pro Series</h3>
+                <h3><span class="price" data-base="iphone">4,130,000</span><small>MMK</small></h3>
+                <table class="spec-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Specification</th>
+                    </tr>
+                    <tr>
+                        <td>Camera</td>
+                        <td>48MP Main, 12MP Ultra-Wide, 12MP Telephoto with 5x Optical Zoom </td>
+                    </tr>
+                    <tr>
+                        <td>Display Size</td>
+                        <td>6.3" Super Retina XDR</td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>3700mAh</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>8GB RAM</td>
+                    </tr>
+                </table>
+                <h5>Storage Options</h5>
+                <div class="capacity-options">
+                    <label><input type="radio" name="capacity1" value="128GB" checked data-price="4,130,000" onchange="updatePrice(this)"> 128GB</label>
+                    <label><input type="radio" name="capacity1" value="256GB" data-price="4,630,000" onchange="updatePrice(this)"> 256GB</label>
+                    <label><input type="radio" name="capacity1" value="512GB"data-price="5,670,000" onchange="updatePrice(this)"> 512GB</label>
+                </div>
+                <h5>Number</h5>
+                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vivo Section -->
+
+    <section class="product">
+        <div class="contain flex">
+            <div class="left">
+                <div class="main-image">
+                    <img src="img/vivomain.png" alt="" style="width: 500px; height: 500px;">
+                </div>
+                <div class="option flex">
+                    <img src="img/vivomain.png" onclick="img(this)">
+                    <img src="img/vivoblack.png" onclick="img(this)">
+                    <img src="img/vivoyellow.png" onclick="img(this)">
+                    <img src="img/vivopink.png" onclick="img(this)">
+                    <img src="img/vivoblue.png" onclick="img(this)">
+                </div>
+            </div>
+            <div class="right">
+                <h3>Vivo S30 Pro Mini Series</h3>
+                <h3><span class="price" data-base="vivo">817,050</span><small>MMK</small></h3>
+                <table class="spec-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Specification</th>
+                    </tr>
+                    <tr>
+                        <td>Camera</td>
+                        <td>Dual: 50MP+ 8MP (ultra-wide)</td>
+                    </tr>
+                    <tr>
+                        <td>Display Size</td>
+                        <td>6.78" AMOLED, 120Hz refresh rate, FHD+ resolution</td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>5000mAh</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>128GB / 256GB / 512GB</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>8GB RAM</td>
+                    </tr>
+                </table>
+                <h5>Capacity</h5>
+                <div class="capacity-options">
+                    <label><input type="radio" name="capacity2" value="256GB"  checked data-price="817,050" onchange="updatePrice(this)"> 256GB</label>
+                    <label><input type="radio" name="capacity2" value="512GB" data-price="921,800" onchange="updatePrice(this)"> 512GB</label>
+                    <label><input type="radio" name="capacity2" value="1TB" data-price="1,085,500" onchange="updatePrice(this)"> 1TB</label>
+                </div>
+                <h5>Number</h5>
+                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Samsung Section -->
+
+    <section class="product">
+        <div class="contain flex">
+            <div class="left">
+                <div class="main-image">
+                    <img src="img/s24.png" alt="" style="width: 500px; height: 500px;">
+                </div>
+                <div class="option flex">
+                    <img src="img/s24.png" onclick="img(this)">
+                    <img src="img/sgray.png" onclick="img(this)">
+                    <img src="img/ssilver.png" onclick="img(this)">
+                    <img src="img/sblue.png" onclick="img(this)">
+                    <img src="img/sorange.png" onclick="img(this)">
+                </div>
+            </div>
+            <div class="right">
+                <h3>SAMSUNG S24 Ultra Series</h3>
+                <h3><span class="price" data-base="samsung">6,180,000</span><small>MMK</small></h3>
+                <table class="spec-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Specification</th>
+                    </tr>
+                    <tr>
+                        <td>Camera</td>
+                        <td>200MP main+12MP,50MP 5x</td>
+                    </tr>
+                    <tr>
+                        <td>Display Size</td>
+                        <td>6.8" QHD+Dynamic quality<td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>5000mAh</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>128GB / 256GB / 512GB</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>8GB RAM</td>
+                    </tr>
+                </table>
+                <h5>Capacity</h5>
+                <div class="capacity-options">
+                    <label><input type="radio" name="capacity3" value="128GB" checked data-price="4,130,000" onchange="updatePrice(this)"> 128GB</label>
+                    <label><input type="radio" name="capacity3" value="256GB" checked data-price="6,180,000" onchange="updatePrice(this)"> 256GB</label>
+                    <label><input type="radio" name="capacity3" value="512GB" data-price="7,189,000" onchange="updatePrice(this)"> 512GB</label>
+                </div>
+                <h5>Number</h5>
+                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Xiaomi Section -->
+
+    <section class="product">
+        <div class="contain flex">
+            <div class="left">
+                <div class="main-image">
+                    <img src="img/xmain.png" alt="" style="width: 500px; height: 500px;">
+                </div>
+                <div class="option flex">
+                    <img src="img/xmain.png" onclick="img(this)">
+                    <img src="img/xblack.png" onclick="img(this)">
+                    <img src="img/xgray.png" onclick="img(this)">
+                    <img src="img/xyellow.png" onclick="img(this)">
+                    <img src="img/xblue.png" onclick="img(this)">
+                </div>
+            </div>
+            <div class="right">
+                <h3>Xiaomi 14T Pro Series</h3>
+                <h3><span class="price" data-base="xiaomi">2,690,000</span><small>MMK</small></h3>
+                <table class="spec-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Specification</th>
+                    </tr>
+                    <tr>
+                        <td>Camera</td>
+                        <td>50MP main + 50MP ultra-wide</td>
+                    </tr>
+                    <tr>
+                        <td>Display Size</td>
+                        <td>6.67" AMOLED, 1.5K resolution</td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>5000mAh</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>128GB / 256GB / 512GB</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>12GB RAM</td>
+                    </tr>
+                </table>
+                <h5>Capacity</h5>
+                <div class="capacity-options">
+                    <label><input type="radio" name="capacity4" value="128GB" checked data-price="4,130,000" onchange="updatePrice(this)"> 128GB</label>
+                    <label><input type="radio" name="capacity4" value="128GB" checked data-price="2,690,000" onchange="updatePrice(this)">256GB</label>
+                    <label><input type="radio" name="capacity4" value="256GB" data-price="2,890,000" onchange="updatePrice(this)"> 512GB</label>
+                </div>
+                <h5>Number</h5>
+                <div class="add flex1"><span>-</span><label>1</label><span>+</span></div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <script>
+        function img(clickedImg) {
+            const section = clickedImg.closest('.product');
+            const mainImg = section.querySelector('.main-image img');
+            mainImg.src = clickedImg.src;
+        }
+
+        function change(color) {
+            const line = document.querySelector('.home');
+            if (line) {
+                line.style.background = color;
+            }
+        }
+    </script>
+    <script>
+        function updatePrice(input) {
+            const section = input.closest('.product');
+            const priceDisplay = section.querySelector('.price');
+            const newPrice = input.dataset.price;
+
+            if (priceDisplay && newPrice) {
+                priceDisplay.textContent = newPrice;
+            }
+}
+</script>
+
+</body>
+</html>

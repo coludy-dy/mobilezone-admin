@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Users | Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <h2 class="brand"><i class="fa-solid fa-mobile-retro" style="margin-right: 8px;"></i>Mobile Zone</h2>
+      <ul class="sidebar-menu">
+        <li><a href="admin.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+        <li><a href="orders.html" ><i class="fas fa-shopping-cart"></i> Orders</a></li>
+        <li><a href="users.html" class="active"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="admin-header">
+        <h1>Users</h1>
+        <div class="profile">
+          <i class="fas fa-user-circle"></i> Admin User
+        </div>
+      </header>
+
+      <section class="settings">
+        <div class="product-table-container">
+            <table class="product-table">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Customer Id</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>cc45</td>
+                    <td>Su Su</td>
+                    <td>No2, education School</td>
+                    <td>su45@gmail.com</td>
+                    <td>09983266926</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>2</td>
+                    <td>gg78</td>
+                    <td>Khin Khin</td>
+                    <td>Computer University, Meiktila</td>
+                    <td>khin89@gmail.com</td>
+                    <td>09696708493</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>3</td>
+                    <td>gg236</td>
+                    <td>mg Mg</td>
+                    <td>Banan Township, Yangon</td>
+                    <td>mg741@gmail.com</td>
+                    <td>09964319205</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>4</td>
+                    <td>jj128</td>
+                    <td>Xing Xing </td>
+                    <td>Taungyi, Shan</td>
+                    <td>luoxing@gmail.com</td>
+                    <td>09790112684</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                 <tr>
+                    <td>5</td>
+                    <td>pp52</td>
+                    <td>Po Po</td>
+                    <td>Meiktila,Mandalay</td>
+                    <td>po762@gmail.com</td>
+                    <td>09696052314</td>
+                    <td class="actions">
+                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- You can add more rows here -->
+                </tbody>
+            </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!---------when click the view button------->
+    <div id="viewModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Customer Information</h2>
+        <p><strong>Customer Id:</strong>cc45</p>
+        <p><strong>Customer Name:</strong>Su Su</p>
+        <p><strong>Address:</strong>N02, education school</p>
+        <p><strong>Email:</strong>su45@gmail.com</p>
+        <p><strong>Ph no:</strong>09983266926</p>
+      </div>
+    </div>
+    <!----------Java Script---------->
+    <script>
+  function openModal() {
+    document.getElementById("viewModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("viewModal").style.display = "none";
+  }
+
+  // Optional: close on outside click
+  window.onclick = function(event) {
+    const modal = document.getElementById("viewModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>

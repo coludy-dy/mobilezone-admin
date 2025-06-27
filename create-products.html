@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Product | Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="brand"><i class="fa-solid fa-mobile-retro" style="margin-right: 8px;"></i>Mobile Zone</h2>
+      <ul class="sidebar-menu">
+        <li><a href="admin.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="products.html" class="active"><i class="fas fa-box"></i> Products</a></li>
+        <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+        <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="admin-header">
+        <h1>Create Product</h1>
+        <div class="profile">
+          <i class="fas fa-user-circle"></i> Admin User
+        </div>
+      </header>
+        <!--  create Product -->
+        <section class="settings">
+          <div class="product-card">
+            <h2>Product Details</h2>
+
+            <div class="card-grid">
+              <div class="input-group">
+                <label for="product-title">Product Title</label>
+                <input type="text" id="product-title" placeholder="Enter product title" />
+              </div>
+
+              <div class="input-group">
+                <label for="product-image"> Main Product Image</label>
+                <input type="file" id="product-image" accept="image/*" />
+              </div>
+
+               <div class="input-group">
+                  <label for="product-gallery">Additional images</label>
+                  <input type="file" id="product-gallery" accept="image/*" multiple />
+              </div>
+
+
+              <div class="input-group">
+                <label for="product-display">Display Size</label>
+                <input type="text" id="product-display" placeholder='e.g. 6.3" AMOLED' />
+              </div>
+
+              <div class="input-group">
+                <label for="product-camera">Camera</label>
+                <input type="text" id="product-camera" placeholder="e.g. 50MP Dual Camera" />
+              </div>
+
+              <div class="input-group">
+                <label for="product-battery">Battery</label>
+                <input type="text" id="product-battery" placeholder="e.g. 5000mAh" />
+              </div>
+
+              <div class="input-group">
+                <label for="product-memory">Memory</label>
+                <input type="text" id="product-memory" placeholder="e.g. 8GB / 128GB" />
+              </div>
+
+              <div class="input-group">
+                <label for="product-memory">Price</label>
+                <input type="text" id="product-price" placeholder="e.g. -----MMK" />
+              </div>
+            </div>
+
+            <div class="button-group">
+            <button type="submit" class="btn-submit">Create Product</button>
+            <button type="submit" class="btn-submit"> <a href="products.html">Back</a></button>
+            </div>
+            
+          </div>
+        </section>
+    </main>
+  </div>
+</body>
+</html>
