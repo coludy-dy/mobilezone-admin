@@ -202,98 +202,171 @@ body {
   background-color: #201f1f;
   color: #fff;
 }
-/*---------product database-----*/
-.product-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.product-table tbody tr:hover {
-  background-color: #eafaf1;
-  transition: background 0.3s ease;
-}
-
+/* Container to allow horizontal scroll on small screens */
 .product-table-container {
-  max-width: 1500px;
-  margin: 10px auto;
+  width: 100%;
   overflow-x: auto;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(1, 41, 23, 0.5);
+  margin-bottom: 2rem;
 }
 
+/* Table styling */
 .product-table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  min-width: 700px; /* forces scroll on small screens */
+}
+
+.product-table thead {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .product-table th,
 .product-table td {
-  padding: 12px 16px;
+  padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid var(--secondary-color);
+  vertical-align: middle;
+  white-space: nowrap; /* prevent line breaks */
 }
 
-.product-table thead {
-  background-color: #f0f0f0;
-  color:var(--secondary-color);
+.product-table tbody tr:hover {
+  background-color: var(--primary-color);
 }
 
+.product-table img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+}
+
+/* Action buttons */
 .actions {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 
 .action-btn {
-  padding: 18px;
+  margin-top:10px;
+  background: none;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  color: white;
+  font-size: 1.1rem;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-.action-btn.view {
-  background-color: #3498db;
+.action-btn.view { color: blue; }
+.action-btn.view:hover { background-color: #e3f2fd; }
+
+.action-btn.edit { color: orangered; }
+.action-btn.edit:hover { background-color: #fff3e0; }
+
+.action-btn.delete { color: red; }
+.action-btn.delete:hover { background-color: #ffebee; }
+
+/* Responsive tweaks */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+  .product-table {
+    font-size: 0.9rem;
+    min-width: 600px; /* still forces horizontal scroll */
+  }
+  .product-table th,
+  .product-table td {
+    padding: 10px 12px;
+  }
+  .action-btn {
+    font-size: 1rem;
+    padding: 5px 7px;
+  }
 }
 
-.action-btn.edit {
-  background-color: #f1c40f;
-  color: #000;
+/* For mobile (narrow screens) */
+@media (max-width: 480px) {
+  .product-table {
+    font-size: 0.85rem;
+    min-width: 500px;
+  }
+  .product-table th,
+  .product-table td {
+    padding: 8px 10px;
+  }
+  .action-btn {
+    font-size: 0.95rem;
+    padding: 4px 6px;
+  }
+  /* Optionally shrink image */
+  .product-table img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
-.action-btn.delete {
-  background-color: #e74c3c;
-}
 /*------create products button-----*/
 .create-product-btn-wrapper {
-  justify-content: flex-end;
+  margin: 1.5rem 0;
+  text-align: right; /* aligns button to right on desktop */
 }
 
-.create-product-btn-wrapper {
-  max-width: 100%;
-  margin: 10px auto 10px auto;
-  justify-content: flex-start; /* Aligns left */
-  align-items: left;
-}
-
+/* Style the button */
 .add-btn {
-  width: 160px;
   background-color:var(--secondary-color);
   color: white;
   border: none;
-  padding: 10px 10px;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 1rem;
   border-radius: 6px;
-  font-size: 15px;
   cursor: pointer;
-  display: flex;
-  gap: 2px;
-  font-weight: 500;
-  margin-left: 1090px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.add-btn:hover {
-  background-color: #246b45;
+.add-btn i {
+  font-size: 1.2rem;
 }
+
+/* Hover effect */
+.add-btn:hover {
+  background-color: #43a047;
+}
+
+/* Responsive adjustments */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .create-product-btn-wrapper {
+    text-align: center; /* center the button */
+  }
+  .add-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+}
+
+/* Mobile small screens */
+@media (max-width: 480px) {
+  .add-btn {
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 12px 0;
+  }
+}
+
 /*-----Creating Products-----*/
 .product-card {
   background: #fff;
@@ -472,3 +545,137 @@ body {
         padding: 30px 20px;
     }
 }
+/* ---------Setting-------*/
+.set {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+}
+ .set h2 {
+      margin-bottom: 1rem;
+      color:var(--secondary-color);
+    }
+
+    .settings-block {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .settings-block h3 {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .settings-block label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .settings-block input,
+    .settings-block select {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .settings-block input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .settings-block button {
+      background:var(--secondary-color);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .settings-block button:hover {
+      background: #43a047;
+    }
+
+    @media (max-width: 768px) {
+      .settings {
+        padding: 1rem;
+      }
+
+      .settings-block {
+        padding: 1rem;
+      }
+    }
+  /*-------- Dark Mode Style------*/
+  /* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .sidebar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .sidebar-menu a {
+  color: #ddd;
+}
+
+.dark-mode .main-content {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .settings-block {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode button {
+  background-color: #4caf50;
+  color: white;
+}
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.action-btn.confirm {
+  background-color:green;
+  color: white;
+}
+
+.action-btn.cancel {
+  background-color: red;
+  color: white;
+}
+
+.action-btn.view {
+  background-color: blue;
+  color: white;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+

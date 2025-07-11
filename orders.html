@@ -36,11 +36,11 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Customer Id</th>
+                    <th>Order Id</th>
                     <th>Customer Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
-                    <th>Phone No</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -49,13 +49,15 @@
                     <td>1</td>
                     <td>cc45</td>
                     <td>Su Su</td>
-                    <td>No2, education School</td>
+                    <td>good</td>
                     <td>su45@gmail.com</td>
-                    <td>09983266926</td>
+                    <td>Pending</td>
                     <td class="actions">
-                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
-                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
-                    </td>
+                       <button class="action-btn view" onclick="openModal()">View</button>
+                    <button class="action-btn confirm">Confirm</button>
+                    <button class="action-btn cancel">Cancel</button>
+                   
+                  </td>
                 </tr>
                 <!-- You can add more rows here -->
                  <tr>
@@ -64,11 +66,13 @@
                     <td>Khin Khin</td>
                     <td>Computer University, Meiktila</td>
                     <td>khin89@gmail.com</td>
-                    <td>09696708493</td>
+                    <td>Pending</td>
                     <td class="actions">
-                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
-                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
-                    </td>
+                      <button class="action-btn view" onclick="openModal()">View</button>
+                    <button class="action-btn confirm">Confirm</button>
+                    <button class="action-btn cancel">Cancel</button>
+                    
+                  </td>
                 </tr>
                 <!-- You can add more rows here -->
                  <tr>
@@ -77,11 +81,13 @@
                     <td>mg Mg</td>
                     <td>Banan Township, Yangon</td>
                     <td>mg741@gmail.com</td>
-                    <td>09964319205</td>
+                    <td>Pending</td>
                     <td class="actions">
-                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
-                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
-                    </td>
+                      <button class="action-btn view" onclick="openModal()">View</button>
+                    <button class="action-btn confirm">Confirm</button>
+                    <button class="action-btn cancel">Cancel</button>
+                    
+                  </td>
                 </tr>
                 <!-- You can add more rows here -->
                  <tr>
@@ -90,11 +96,13 @@
                     <td>Xing Xing </td>
                     <td>Taungyi, Shan</td>
                     <td>luoxing@gmail.com</td>
-                    <td>09790112684</td>
+                    <td>Pending</td>
                     <td class="actions">
-                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
-                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
-                    </td>
+                      <button class="action-btn view" onclick="openModal()">View</button>
+                    <button class="action-btn confirm">Confirm</button>
+                    <button class="action-btn cancel">Cancel</button>
+                    
+                  </td>
                 </tr>
                 <!-- You can add more rows here -->
                  <tr>
@@ -103,11 +111,13 @@
                     <td>Po Po</td>
                     <td>Meiktila,Mandalay</td>
                     <td>po762@gmail.com</td>
-                    <td>09696052314</td>
+                    <td>Pending</td>
                     <td class="actions">
-                    <button class="action-btn view" onclick="openModal()"><i class="fas fa-eye"></i></button>
-                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
-                    </td>
+                      <button class="action-btn view" onclick="openModal()">View</button>
+                    <button class="action-btn confirm">Confirm</button>
+                    <button class="action-btn cancel">Cancel</button>
+                    
+                  </td>
                 </tr>
                 <!-- You can add more rows here -->
                 </tbody>
@@ -120,9 +130,13 @@
     <div id="viewModal" class="modal">
       <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2>Customer Information</h2>
-        <p><strong>Customer Id:</strong>cc45</p>
+        <h2>Order Information</h2>
+        <p><strong>Order Id:</strong>cc45</p>
         <p><strong>Customer Name:</strong>Su Su</p>
+        <p><strong>Item Name:</strong>Iphone 16 pro</p>
+        <p><strong>Qty:</strong>1</p>
+        <p><strong>Price:</strong>465,0000</p>
+        <p><strong>Total Price:</strong>465,0000</p>
         <p><strong>Address:</strong>N02, education school</p>
         <p><strong>Email:</strong>su45@gmail.com</p>
         <p><strong>Ph no:</strong>09983266926</p>
