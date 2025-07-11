@@ -411,12 +411,13 @@ body {
   gap: 20px; /* space between buttons */
   margin-top: 20px;
 }
+
 .btn-submit, a {
   margin-top: 20px;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
-  background-color: var(--secondary-color);
+  background-color:var(--secondary-color);
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -452,7 +453,7 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
-/*----------------------------------------Admin Login------------------------------------------*/
+/*--------------------------------------------------------Admin Login------------------------------------------*/
 .login {
      flex: 1;
     display: flex;
@@ -460,6 +461,7 @@ body {
     justify-content: center;
     padding: 80px 20px;
     background: var(--primary-color);
+    min-height: 100vh;
 }
 
 .wrap {
@@ -624,6 +626,10 @@ body {
 }
 
 .dark-mode .main-content {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .login {
   background-color: #1a1a1a;
 }
 
