@@ -38,6 +38,7 @@
                     <th>No</th>
                     <th>Order Id</th>
                     <th>Customer Name</th>
+                    <th>Item Name</th>
                     <th>Qty</th>
                     <th>Amount</th>
                     <th>Status</th>
@@ -49,8 +50,9 @@
                     <td>1</td>
                     <td>cc45</td>
                     <td>Su Su</td>
-                    <td>good</td>
-                    <td>su45@gmail.com</td>
+                    <td>Ipone 16Pro</td>
+                    <td>1</td>
+                    <td>45,600,00</td>
                     <td>Pending</td>
                     <td class="actions">
                        <button class="action-btn view" onclick="openModal()">View</button>
@@ -64,8 +66,9 @@
                     <td>2</td>
                     <td>gg78</td>
                     <td>Khin Khin</td>
-                    <td>Computer University, Meiktila</td>
-                    <td>khin89@gmail.com</td>
+                    <td>Samsung Ultra 24</td>
+                    <td>2</td>
+                    <td>789,2100</td>
                     <td>Pending</td>
                     <td class="actions">
                       <button class="action-btn view" onclick="openModal()">View</button>
@@ -79,8 +82,9 @@
                     <td>3</td>
                     <td>gg236</td>
                     <td>mg Mg</td>
-                    <td>Banan Township, Yangon</td>
-                    <td>mg741@gmail.com</td>
+                    <td>Vivo 14T</td>
+                    <td>1</td>
+                    <td>890,000</td>
                     <td>Pending</td>
                     <td class="actions">
                       <button class="action-btn view" onclick="openModal()">View</button>
@@ -94,8 +98,9 @@
                     <td>4</td>
                     <td>jj128</td>
                     <td>Xing Xing </td>
-                    <td>Taungyi, Shan</td>
-                    <td>luoxing@gmail.com</td>
+                    <td>Xiaomi Pro</td>
+                    <td>2</td>
+                    <td>789,000,00</td>
                     <td>Pending</td>
                     <td class="actions">
                       <button class="action-btn view" onclick="openModal()">View</button>
@@ -109,8 +114,9 @@
                     <td>5</td>
                     <td>pp52</td>
                     <td>Po Po</td>
-                    <td>Meiktila,Mandalay</td>
-                    <td>po762@gmail.com</td>
+                    <td>Oppo</td>
+                    <td>1</td>
+                    <td>456,000,00</td>
                     <td>Pending</td>
                     <td class="actions">
                       <button class="action-btn view" onclick="openModal()">View</button>
@@ -160,5 +166,12 @@
     }
   }
 </script>
+<script>
+// Apply dark mode on page load
+if (localStorage.getItem('darkMode') === 'enabled') {
+  document.body.classList.add('dark-mode');
+}
+</script>
+
 </body>
 </html>
