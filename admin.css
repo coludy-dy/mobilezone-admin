@@ -37,12 +37,10 @@ body {
   background: var(--primary-color);
 }
 .admin-header h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--secondary-color);
+  font-size: 20px;
+  color:green;
   letter-spacing: 0.5px;
 }
-
 
 .admin-container {
   display: flex;
@@ -76,7 +74,7 @@ body {
 }
 
 .sidebar-menu a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 16px;
   display: block;
@@ -86,7 +84,7 @@ body {
 }
 
 .sidebar-menu a:hover {
-  background: #a3f0a7;
+  background: #329938;
   color: #194e09;
 }
 .sidebar-menu li a.active {
@@ -144,7 +142,7 @@ body {
   font-weight: bold;
   color:red;
 }
-/* -------------Admin Products-----------*/
+/* ---------------------------------------------------Admin Products----------------------------------------*/
 
 /*----------Filter Checking--------*/
 .filter-bar {
@@ -264,13 +262,13 @@ body {
 }
 
 .action-btn.view { color: blue; }
-.action-btn.view:hover { background-color: #e3f2fd; }
+.action-btn.view:hover { background-color: #206ea7; }
 
 .action-btn.edit { color: orangered; }
-.action-btn.edit:hover { background-color: #fff3e0; }
+.action-btn.edit:hover { background-color: #c28118; }
 
 .action-btn.delete { color: red; }
-.action-btn.delete:hover { background-color: #ffebee; }
+.action-btn.delete:hover { background-color: #ddc5c9; }
 
 /* Responsive tweaks */
 
@@ -311,7 +309,7 @@ body {
   }
 }
 
-/*------create products button-----*/
+/*----------------------------------------create products button--------------------------------------*/
 .create-product-btn-wrapper {
   margin: 1.5rem 0;
   text-align: right; /* aligns button to right on desktop */
@@ -454,7 +452,7 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
-/*-------Admin Login------*/
+/*----------------------------------------Admin Login------------------------------------------*/
 .login {
      flex: 1;
     display: flex;
@@ -545,36 +543,32 @@ body {
         padding: 30px 20px;
     }
 }
-/* ---------Setting-------*/
-.set {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 10px;
-}
+/* ------------------------------------------------Setting-------------------------------------------------*/
  .set h2 {
       margin-bottom: 1rem;
-      color:var(--secondary-color);
+      color:green;
+      text-align: center;
     }
 
     .settings-block {
+      max-width: 800px;
+      margin: 0 auto;
       background: #fff;
-      padding: 1.5rem;
+      padding: 2rem;
       margin-bottom: 1.5rem;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
     .settings-block h3 {
       margin-bottom: 1rem;
-      color: #444;
+      color: green;
     }
 
     .settings-block label {
       display: block;
       margin-bottom: 10px;
-      color: #555;
+      color:green;
     }
 
     .settings-block input,
@@ -614,11 +608,11 @@ body {
         padding: 1rem;
       }
     }
-  /*-------- Dark Mode Style------*/
+  /*-------------------------------------------------Dark Mode Style--------------------------------------------------*/
   /* Dark Mode Styles */
 .dark-mode {
   background-color: #121212;
-  color: #f1f1f1;
+  color: var(--secondary-color);
 }
 
 .dark-mode .sidebar {
