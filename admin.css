@@ -119,22 +119,30 @@ body {
 /* Dashboard Cards */
 .dashboard {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .card {
-  background-color: #fff;
-  border-left: 5px solid var(--secondary-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .card h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   color: #333;
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .card p {
